@@ -1,1 +1,186 @@
 /* Your SCSS here. */
+
+@mixin text($color, $size) {
+    color: $color;
+    font-size: $size;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.background_image {
+    background-image: url("../assets/UIUC_Quad.png");
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    background-size: cover;
+}
+
+$header_height: 70px;
+$header_background: steelblue;
+$header_font_size: 40px;
+
+.h {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $header_background;
+    height: $header_height;
+    vertical-align: middle;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.h_text {
+    flex-grow: 1;
+    @include text(white, $header_font_size);
+    margin: 0;
+    margin-top: ($header_height - $header_font_size) / 2;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.f {
+    background-color: $header_background;
+    height: $header_height;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.f_text {
+    @include text(white, $header_font_size);
+    vertical-align: middle;
+    text-align: middle;
+}
+
+.nav_button_container {
+    flex-grow: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: ($header_height - $header_font_size) / 2;
+    margin-right: 10px;
+}
+
+.nav_button {
+    background-color: $header_background;
+    border: 0px;
+    @include text(white, $header_font_size / 2);
+    height: $header_font_size;
+    &:hover {
+        color:orange;
+    }
+    margin: 0;
+}
+
+$class_container_gap:100px;
+$class_info_border_color: rgba(70, 131, 180, 0.685);
+
+.class_list {
+    display: flex;
+    flex-direction: column;
+    border-top: $header_height + $class_container_gap solid transparent;
+    border-bottom: $class_container_gap solid transparent;
+    gap: $class_container_gap;
+}
+
+.class_container {
+
+}
+
+
+.class_carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    background-color: rgba(255, 166, 0, 0.521);
+    width: 100%;
+    align-items: center;
+}
+
+.class_carousel_button {
+    background-color: transparent;
+    border: 0;
+    @include text(rgba(255, 255, 255, 0.603), 50px);
+    text-align: center;
+
+    &:hover {
+        color: $class_info_border_color;
+    }
+    height: 400px;
+}
+
+.class_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: $class_info_border_color;
+    height: 20%;
+    border-bottom: 5px solid rgba(70, 131, 180, 0.507);
+}
+
+.class_info_text {
+    @include text(white, 30px);
+    width: 33.3%;
+    vertical-align: middle;
+    margin: 1px;
+    text-align: center;
+}
+
+.class_interface_container {
+    display: none;
+    margin: 0;
+    height: 400px;
+    margin-bottom: 1.5%;
+}
+
+.class_interface {
+    width: 80%;
+    height: 80%;
+    vertical-align: middle;
+    margin-top: 1%;
+}
+
+.class_interface_header {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    height: 33%;
+    text-align: center;
+    @include text(white, 30px);
+    background-color: $class_info_border_color;
+    height: 20%;
+    border-bottom: 5px solid rgba(70, 131, 180, 0.507);
+}
+
+.class_assignments {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    height: 20%;
+    border: 1px solid steelblue;
+    @include text(orange, 20px);
+    text-align: center;
+}
+
+$assignment_background: rgb(255, 255, 255);
+
+.due_date {
+    background-color: $assignment_background;
+    flex-grow: 1;
+}
+
+.assignment_name {
+    background-color: $assignment_background;
+    flex-grow: 5;
+}
+
+.grade {
+    background-color: $assignment_background;
+    flex-grow: 1;
+}
+
+

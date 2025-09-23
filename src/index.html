@@ -5,9 +5,480 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MP1</title>
+        <script src="https://kit.fontawesome.com/afc6966884.js" crossorigin="anonymous"></script>
+        <script src="./js/main.js"></script>
     </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+    <body style="margin: 0; border: 0;">
+        <div class="background_image"></div>
+        <header class = "h">
+            <h1 class="h_text">Better Canvas Dashboard</h1>
+            <div class="nav_button_container">
+                <button class="nav_button" onclick="nav_button(0)">CS 409</button>
+                <button class="nav_button" onclick="nav_button(1)">CS 361</button>
+                <button class="nav_button" onclick="nav_button(2)">CS 421</button>
+            </div>
+        </header>
+        <div class="class_list">
+            <div class="class_container">
+                <div class="class_info">
+                    <div class="class_info_text">
+                        <p>Class: CS 409</p>
+                    </div>
+                    <div class="class_info_text">
+                        <p>Location: CIF | Time: 3:00 PM</p>
+                    </div>
+                    <div class="class_info_text">
+                        <p>Professor: Ranjitha Kumar</p>
+                    </div>
+                </div>
+                <div class="class_carousel">
+                    <button class="class_carousel_button" onclick="carousel(0,-1)"> < </button>
+                    <div class="class_interface">
+                        <div class="class_interface_container">
+                            <div class = "class_interface_header">
+                                <div style="flex-grow: 1;">
+                                    <p>Due Date</p>
+                                </div>
+                                <div style="flex-grow: 5;">
+                                    <p>Current Assignments</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 1</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 1</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 2</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 2</p>
+                                </div>
+                            </div>
+
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 3</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class_interface_container">
+                            <div class = "class_interface_header">
+                                <div style="flex-grow: 1;">
+                                    <p>Due Date</p>
+                                </div>
+                                <div style="flex-grow: 5;">
+                                    <p>Completed Assignments</p>
+                                </div>
+
+                                <div style="flex-grow: 1;">
+                                    <p>Grade</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 1</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 1</p>
+                                </div>
+
+                                <div class="grade">
+                                    <p>Grade 1</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 2</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 2</p>
+                                </div>
+
+                                <div class="grade">
+                                    <p>Grade 2</p>
+                                </div>
+                            </div>
+
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 3</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 3</p>
+                                </div>
+                                
+                                <div class="grade">
+                                    <p>Grade 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class_interface_container">
+                            <div class = "class_interface_header">
+                                <div style="flex-grow: 1;">
+                                    <p>Date Posted</p>
+                                </div>
+                                <div style="flex-grow: 5;">
+                                    <p>Announcements</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Date 1</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Post 1</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Date 2</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Post 2</p>
+                                </div>
+                            </div>
+
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Date 3</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Post 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="class_carousel_button" onclick="carousel(0,1)">> </button>
+                </div>
+            </div>
+
+            <div class="class_container">
+                <div class="class_info">
+                    <div class="class_info_text">
+                        <p>Class: CS 361</p>
+                    </div>
+                    <div class="class_info_text">
+                        <p>Location: CIF | Time: 9:00 AM</p>
+                    </div>
+                    <div class="class_info_text">
+                        <p>Professor: Hongye Liu</p>
+                    </div>
+                </div>
+                <div class="class_carousel">
+                    <button class="class_carousel_button" onclick="carousel(1,-1)"> < </button>
+                    <div class="class_interface">
+                        <div class="class_interface_container">
+                            <div class = "class_interface_header">
+                                <div style="flex-grow: 1;">
+                                    <p>Due Date</p>
+                                </div>
+                                <div style="flex-grow: 5;">
+                                    <p>Current Assignments</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 1</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 1</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 2</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 2</p>
+                                </div>
+                            </div>
+
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 3</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class_interface_container">
+                            <div class = "class_interface_header">
+                                <div style="flex-grow: 1;">
+                                    <p>Due Date</p>
+                                </div>
+                                <div style="flex-grow: 5;">
+                                    <p>Completed Assignments</p>
+                                </div>
+
+                                <div style="flex-grow: 1;">
+                                    <p>Grade</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 1</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 1</p>
+                                </div>
+
+                                <div class="grade">
+                                    <p>Grade 1</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 2</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 2</p>
+                                </div>
+
+                                <div class="grade">
+                                    <p>Grade 2</p>
+                                </div>
+                            </div>
+
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 3</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 3</p>
+                                </div>
+                                
+                                <div class="grade">
+                                    <p>Grade 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class_interface_container">
+                            <div class = "class_interface_header">
+                                <div style="flex-grow: 1;">
+                                    <p>Date Posted</p>
+                                </div>
+                                <div style="flex-grow: 5;">
+                                    <p>Announcements</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Date 1</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Post 1</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Date 2</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Post 2</p>
+                                </div>
+                            </div>
+
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Date 3</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Post 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="class_carousel_button" onclick="carousel(1,1)">> </button>
+                </div>
+            </div>
+
+            <div class="class_container">
+                <div class="class_info">
+                    <div class="class_info_text">
+                        <p>Class: CS 421</p>
+                    </div>
+                    <div class="class_info_text">
+                        <p>Location: Auditorium | Time: 2:00 PM</p>
+                    </div>
+                    <div class="class_info_text">
+                        <p>Professor: Elsa Gunter</p>
+                    </div>
+                </div>
+                <div class="class_carousel">
+                    <button class="class_carousel_button" onclick="carousel(2,-1)"> < </button>
+                    <div class="class_interface">
+                        <div class="class_interface_container">
+                            <div class = "class_interface_header">
+                                <div style="flex-grow: 1;">
+                                    <p>Due Date</p>
+                                </div>
+                                <div style="flex-grow: 5;">
+                                    <p>Current Assignments</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 1</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 1</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 2</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 2</p>
+                                </div>
+                            </div>
+
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 3</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class_interface_container">
+                            <div class = "class_interface_header">
+                                <div style="flex-grow: 1;">
+                                    <p>Due Date</p>
+                                </div>
+                                <div style="flex-grow: 5;">
+                                    <p>Completed Assignments</p>
+                                </div>
+
+                                <div style="flex-grow: 1;">
+                                    <p>Grade</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 1</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 1</p>
+                                </div>
+
+                                <div class="grade">
+                                    <p>Grade 1</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 2</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 2</p>
+                                </div>
+
+                                <div class="grade">
+                                    <p>Grade 2</p>
+                                </div>
+                            </div>
+
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Due Date 3</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Assignment 3</p>
+                                </div>
+                                
+                                <div class="grade">
+                                    <p>Grade 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="class_interface_container">
+                            <div class = "class_interface_header">
+                                <div style="flex-grow: 1;">
+                                    <p>Date Posted</p>
+                                </div>
+                                <div style="flex-grow: 5;">
+                                    <p>Announcements</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Date 1</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Post 1</p>
+                                </div>
+                            </div>
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Date 2</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Post 2</p>
+                                </div>
+                            </div>
+
+                            <div class="class_assignments">
+                                <div class="due_date">
+                                    <p>Date 3</p>
+                                </div>
+
+                                <div class="assignment_name">
+                                    <p>Post 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="class_carousel_button" onclick="carousel(2,1)">> </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class = "f">
+            <h1 class="f_text">By David Dai</h1>
+        </footer>
     </body>
+    
 </html>
