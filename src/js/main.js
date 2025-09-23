@@ -3,6 +3,10 @@
 let classes = [0,0,0];
 let slide_count = 3;
 
+let header_font_size = 40;
+let header_height = 70;
+
+
 function nav_button(c) {
     class_containers = document.getElementsByClassName("class_container");
     class_containers[c].scrollIntoView({behavior: "smooth", block: "center"});
@@ -45,5 +49,21 @@ document.addEventListener("scroll", function(){
         }
     }
 
-    
+    body_obj = document.getElementsByTagName("body")[0];
+    let multiplier = Math.max(((600 + body_obj.getBoundingClientRect().top) / 600), .7);
+
+    header = document.getElementsByTagName("header")[0];
+    header_text = document.getElementsByClassName("h_text")[0];
+
+    header.style.height = header_height * multiplier + "px";
+    header_text.style.fontSize = header_font_size * multiplier + "px";
+    header_text.style.marginTop = multiplier * (header_height - header_font_size) / 2 +  "px";
+
+    nav_button_container = document.getElementsByClassName("nav_button_container")[0];
+    nav_button_container.style.marginTop = multiplier * (header_height - header_font_size) / 4 +  "px";
+
+    nav_buttons = document.getElementsByClassName("nav_button");
+    for (let i = 0; i < nav_buttons.length; i++){
+        nav_buttons[i].style.fontSize = header_font_size * (1/2) * multiplier + "px";
+    }
 });

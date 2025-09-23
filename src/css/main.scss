@@ -42,16 +42,16 @@ $header_font_size: 40px;
 }
 
 .f {
+    display: flex;
     background-color: $header_background;
     height: $header_height;
     vertical-align: middle;
     width: 100%;
-}
-
-.f_text {
-    @include text(white, $header_font_size);
-    vertical-align: middle;
+    align-items: center;
     text-align: middle;
+    @include text(white, $header_font_size);
+    align-items: center;
+    justify-content: center;
 }
 
 .nav_button_container {
@@ -60,7 +60,7 @@ $header_font_size: 40px;
     flex-direction: row;
     justify-content: flex-end;
     gap: 10px;
-    margin-top: ($header_height - $header_font_size) / 2;
+    margin-top: ($header_height - $header_font_size) / 4;
     margin-right: 10px;
 }
 
@@ -68,7 +68,7 @@ $header_font_size: 40px;
     background-color: $header_background;
     border: 0px;
     @include text(white, $header_font_size / 2);
-    height: $header_font_size;
+    // height: $header_font_size;
     &:hover {
         color:orange;
     }
@@ -87,7 +87,7 @@ $class_info_border_color: rgba(70, 131, 180, 0.685);
 }
 
 .class_container {
-
+    margin: 0;
 }
 
 
@@ -126,7 +126,6 @@ $class_info_border_color: rgba(70, 131, 180, 0.685);
     @include text(white, 30px);
     width: 33.3%;
     vertical-align: middle;
-    margin: 1px;
     text-align: center;
 }
 
@@ -148,11 +147,12 @@ $class_info_border_color: rgba(70, 131, 180, 0.685);
     display: flex;
     flex-direction: row;
     gap: 2px;
-    height: 33%;
+    height: 20%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     @include text(white, 30px);
     background-color: $class_info_border_color;
-    height: 20%;
     border-bottom: 5px solid rgba(70, 131, 180, 0.507);
 }
 
@@ -161,9 +161,9 @@ $class_info_border_color: rgba(70, 131, 180, 0.685);
     flex-direction: row;
     gap: 2px;
     height: 20%;
-    border: 1px solid steelblue;
-    @include text(orange, 20px);
     text-align: center;
+    @include text(orange, 20px);
+    border: 1px solid steelblue;
 }
 
 $assignment_background: rgb(255, 255, 255);
@@ -183,4 +183,12 @@ $assignment_background: rgb(255, 255, 255);
     flex-grow: 1;
 }
 
+.uiuc_video {
+    vertical-align: middle;
+    min-width: 30%;
+    max-width: 50%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    border: 2px solid white;
+}
 
