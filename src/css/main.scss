@@ -239,8 +239,12 @@ $assignment_background: rgb(255, 255, 255);
     }
 }
 
-.social_media {
+.social_media_button {
     color: white;
+
+    &:hover {
+        color: orange;
+    }
 }
 
 .social_media_container {

@@ -10,8 +10,13 @@ let assignments = 3;
 
 
 function nav_button(c) {
-    class_containers = document.getElementsByClassName("class_container");
-    class_containers[c].scrollIntoView({behavior: "smooth", block: "center"});
+    if (c ==  3) {
+        video = document.getElementsByClassName("uiuc_video")[0];
+        video.scrollIntoView({behavior: "smooth", block: "center"});
+    } else {
+        class_containers = document.getElementsByClassName("class_container");
+        class_containers[c].scrollIntoView({behavior: "smooth", block: "center"});
+    }
 }
 
 
@@ -43,7 +48,7 @@ document.addEventListener("scroll", function(){
     class_containers = document.getElementsByClassName("class_container");
     nav_buttons = document.getElementsByClassName("nav_button");
 
-    for (let i = 0; i < nav_buttons.length; i++){
+    for (let i = 0; i < 3; i++){
         if (class_containers[i].getBoundingClientRect().top > 0 && class_containers[i].getBoundingClientRect().bottom < window.innerHeight){
             nav_buttons[i].style.color = "orange";
         } else {
@@ -72,11 +77,13 @@ document.addEventListener("scroll", function(){
     video = document.getElementsByClassName("uiuc_video")[0];
 
     if (video.getBoundingClientRect().top > 0 && video.getBoundingClientRect().bottom < window.innerHeight) {
+        nav_buttons[3].style.color = "orange";
         video.style.animation = "video_fade 2s";
         video.style.opacity = 1;
     } else if (video.getBoundingClientRect().top > window.innerHeight) {
         video.style.opacity = 0;
         video.style.animation = "";
+        nav_buttons[3].style.color = "white";
     }
 });
 
