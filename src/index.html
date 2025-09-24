@@ -8,7 +8,7 @@
         <script src="https://kit.fontawesome.com/afc6966884.js" crossorigin="anonymous"></script>
         <script src="./js/main.js"></script>
     </head>
-    <body style="margin: 0; border: 0;">
+    <body class=".body ">
         <div class="background_image"></div>
         <header class = "h">
             <h1 class="h_text">Better Canvas Dashboard</h1>
@@ -36,10 +36,10 @@
                     <div class="class_interface">
                         <div class="class_interface_container">
                             <div class = "class_interface_header">
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Due Date</p>
                                 </div>
-                                <div style="flex-grow: 5;">
+                                <div class="interface_header_text2">
                                     <p>Current Assignments</p>
                                 </div>
                             </div>
@@ -51,6 +51,18 @@
                                 <div class="assignment_name">
                                     <p>Assignment 1</p>
                                 </div>
+
+
+                                <button class="modal_open" onclick="open_modal(0,0)">
+                                    <span class="fa-classic fa-solid fa-circle-info fa-2x"></span>
+                                </button>
+
+                                <dialog class="modal">
+                                    <button class="modal_close" onclick="close_modal(0,0)">
+                                        <span class="fa-classic fa-solid fa-xmark fa-2x"></span>
+                                    </button>
+                                    <p>Extra Information</p>
+                                </dialog>
                             </div>
                             <div class="class_assignments">
                                 <div class="due_date">
@@ -60,6 +72,17 @@
                                 <div class="assignment_name">
                                     <p>Assignment 2</p>
                                 </div>
+
+                                <button class="modal_open" onclick="open_modal(0,1)">
+                                    <span class="fa-classic fa-solid fa-circle-info fa-2x"></span>
+                                </button>
+
+                                <dialog class="modal">
+                                    <button class="modal_close" onclick="close_modal(0,1)">
+                                        <span class="fa-classic fa-solid fa-xmark fa-2x"></span>
+                                    </button>
+                                    <p>Extra Information</p>
+                                </dialog>
                             </div>
 
                             <div class="class_assignments">
@@ -70,19 +93,30 @@
                                 <div class="assignment_name">
                                     <p>Assignment 3</p>
                                 </div>
+
+                                <button class="modal_open" onclick="open_modal(0,2)">
+                                    <span class="fa-classic fa-solid fa-circle-info fa-2x"></span>
+                                </button>
+
+                                <dialog class="modal">
+                                    <button class="modal_close" onclick="close_modal(0,2)">
+                                        <span class="fa-classic fa-solid fa-xmark fa-2x"></span>
+                                    </button>
+                                    <p>Extra Information</p>
+                                </dialog>
                             </div>
                         </div>
 
                         <div class="class_interface_container">
                             <div class = "class_interface_header">
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Due Date</p>
                                 </div>
-                                <div style="flex-grow: 5;">
+                                <div class="interface_header_text2">
                                     <p>Completed Assignments</p>
                                 </div>
 
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Grade</p>
                                 </div>
                             </div>
@@ -130,10 +164,10 @@
 
                         <div class="class_interface_container">
                             <div class = "class_interface_header">
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Date Posted</p>
                                 </div>
-                                <div style="flex-grow: 5;">
+                                <div class="interface_header_text2">
                                     <p>Announcements</p>
                                 </div>
                             </div>
@@ -188,10 +222,10 @@
                     <div class="class_interface">
                         <div class="class_interface_container">
                             <div class = "class_interface_header">
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Due Date</p>
                                 </div>
-                                <div style="flex-grow: 5;">
+                                <div class="interface_header_text">
                                     <p>Current Assignments</p>
                                 </div>
                             </div>
@@ -203,6 +237,18 @@
                                 <div class="assignment_name">
                                     <p>Assignment 1</p>
                                 </div>
+
+
+                                <button class="modal_open" onclick="open_modal(1,0)">
+                                    <span class="fa-classic fa-solid fa-circle-info fa-2x"></span>
+                                </button>
+
+                                <dialog class="modal">
+                                    <button class="modal_close" onclick="close_modal(1,0)">
+                                        <span class="fa-classic fa-solid fa-xmark fa-2x"></span>
+                                    </button>
+                                    <p>Extra Information</p>
+                                </dialog>
                             </div>
                             <div class="class_assignments">
                                 <div class="due_date">
@@ -212,6 +258,17 @@
                                 <div class="assignment_name">
                                     <p>Assignment 2</p>
                                 </div>
+
+                                <button class="modal_open" onclick="open_modal(1,1)">
+                                    <span class="fa-classic fa-solid fa-circle-info fa-2x"></span>
+                                </button>
+
+                                <dialog class="modal">
+                                    <button class="modal_close" onclick="close_modal(1,1)">
+                                        <span class="fa-classic fa-solid fa-xmark fa-2x"></span>
+                                    </button>
+                                    <p>Extra Information</p>
+                                </dialog>
                             </div>
 
                             <div class="class_assignments">
@@ -222,19 +279,30 @@
                                 <div class="assignment_name">
                                     <p>Assignment 3</p>
                                 </div>
+
+                                <button class="modal_open" onclick="open_modal(1,2)">
+                                    <span class="fa-classic fa-solid fa-circle-info fa-2x"></span>
+                                </button>
+
+                                <dialog class="modal">
+                                    <button class="modal_close" onclick="close_modal(1,2)">
+                                        <span class="fa-classic fa-solid fa-xmark fa-2x"></span>
+                                    </button>
+                                    <p>Extra Information</p>
+                                </dialog>
                             </div>
                         </div>
 
                         <div class="class_interface_container">
                             <div class = "class_interface_header">
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Due Date</p>
                                 </div>
-                                <div style="flex-grow: 5;">
+                                <div class="interface_header_text2">
                                     <p>Completed Assignments</p>
                                 </div>
 
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Grade</p>
                                 </div>
                             </div>
@@ -282,10 +350,10 @@
 
                         <div class="class_interface_container">
                             <div class = "class_interface_header">
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Date Posted</p>
                                 </div>
-                                <div style="flex-grow: 5;">
+                                <div class="interface_header_text2">
                                     <p>Announcements</p>
                                 </div>
                             </div>
@@ -340,10 +408,10 @@
                     <div class="class_interface">
                         <div class="class_interface_container">
                             <div class = "class_interface_header">
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Due Date</p>
                                 </div>
-                                <div style="flex-grow: 5;">
+                                <div class="interface_header_text2">
                                     <p>Current Assignments</p>
                                 </div>
                             </div>
@@ -355,6 +423,18 @@
                                 <div class="assignment_name">
                                     <p>Assignment 1</p>
                                 </div>
+
+
+                                <button class="modal_open" onclick="open_modal(2,0)">
+                                    <span class="fa-classic fa-solid fa-circle-info fa-2x"></span>
+                                </button>
+
+                                <dialog class="modal">
+                                    <button class="modal_close" onclick="close_modal(2,0)">
+                                        <span class="fa-classic fa-solid fa-xmark fa-2x"></span>
+                                    </button>
+                                    <p>Extra Information</p>
+                                </dialog>
                             </div>
                             <div class="class_assignments">
                                 <div class="due_date">
@@ -364,6 +444,17 @@
                                 <div class="assignment_name">
                                     <p>Assignment 2</p>
                                 </div>
+
+                                <button class="modal_open" onclick="open_modal(2,1)">
+                                    <span class="fa-classic fa-solid fa-circle-info fa-2x"></span>
+                                </button>
+
+                                <dialog class="modal">
+                                    <button class="modal_close" onclick="close_modal(2,1)">
+                                        <span class="fa-classic fa-solid fa-xmark fa-2x"></span>
+                                    </button>
+                                    <p>Extra Information</p>
+                                </dialog>
                             </div>
 
                             <div class="class_assignments">
@@ -374,19 +465,30 @@
                                 <div class="assignment_name">
                                     <p>Assignment 3</p>
                                 </div>
+
+                                <button class="modal_open" onclick="open_modal(2,2)">
+                                    <span class="fa-classic fa-solid fa-circle-info fa-2x"></span>
+                                </button>
+
+                                <dialog class="modal">
+                                    <button class="modal_close" onclick="close_modal(2,2)">
+                                        <span class="fa-classic fa-solid fa-xmark fa-2x"></span>
+                                    </button>
+                                    <p>Extra Information</p>
+                                </dialog>
                             </div>
                         </div>
 
                         <div class="class_interface_container">
                             <div class = "class_interface_header">
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Due Date</p>
                                 </div>
-                                <div style="flex-grow: 5;">
+                                <div class="interface_header_text2">
                                     <p>Completed Assignments</p>
                                 </div>
 
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Grade</p>
                                 </div>
                             </div>
@@ -434,10 +536,10 @@
 
                         <div class="class_interface_container">
                             <div class = "class_interface_header">
-                                <div style="flex-grow: 1;">
+                                <div class="interface_header_text">
                                     <p>Date Posted</p>
                                 </div>
-                                <div style="flex-grow: 5;">
+                                <div class="interface_header_text2">
                                     <p>Announcements</p>
                                 </div>
                             </div>
@@ -482,7 +584,15 @@
         </video>
 
         <footer class = "f">
-            <p>By David Dai</p>
+            <p class="f_text">By David Dai</p>
+            <div class = "social_media_container">
+                <a href="https://www.reddit.com/" class="social_media" target="_blank">
+                    <span class="fa-clasic fa-brands fa-reddit fa-0.5x"></span>
+                </a>
+                <a href="https://www.instagram.com/" class="social_media" target="_blank">
+                    <span class="fa-clasic fa-brands fa-instagram fa-0.5x"></span>
+                </a>
+            </div>
         </footer>
     </body>
     

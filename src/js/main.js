@@ -6,6 +6,8 @@ let slide_count = 3;
 let header_font_size = 40;
 let header_height = 70;
 
+let assignments = 3;
+
 
 function nav_button(c) {
     class_containers = document.getElementsByClassName("class_container");
@@ -50,7 +52,7 @@ document.addEventListener("scroll", function(){
     }
 
     body_obj = document.getElementsByTagName("body")[0];
-    let multiplier = Math.max(((600 + body_obj.getBoundingClientRect().top) / 600), .7);
+    let multiplier = Math.max(((2000 + body_obj.getBoundingClientRect().top) / 2000), .7);
 
     header = document.getElementsByTagName("header")[0];
     header_text = document.getElementsByClassName("h_text")[0];
@@ -66,4 +68,24 @@ document.addEventListener("scroll", function(){
     for (let i = 0; i < nav_buttons.length; i++){
         nav_buttons[i].style.fontSize = header_font_size * (1/2) * multiplier + "px";
     }
+
+    video = document.getElementsByClassName("uiuc_video")[0];
+
+    if (video.getBoundingClientRect().top > 0 && video.getBoundingClientRect().bottom < window.innerHeight) {
+        video.style.animation = "video_fade 2s";
+        video.style.opacity = 1;
+    } else if (video.getBoundingClientRect().top > window.innerHeight) {
+        video.style.opacity = 0;
+        video.style.animation = "";
+    }
 });
+
+function open_modal(c,idx) {
+    curr_modal = document.getElementsByClassName("modal")[(c * assignments) + idx];
+    curr_modal.showModal();
+}
+
+function close_modal(c,idx) {
+    curr_modal = document.getElementsByClassName("modal")[(c * assignments) + idx];
+    curr_modal.close();
+}
